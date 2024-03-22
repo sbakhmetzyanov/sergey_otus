@@ -1,4 +1,4 @@
-from rectangle import Rectangle
+from src.rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -7,4 +7,5 @@ class Square(Rectangle):
         if side_a <= 0:
             raise ValueError("Сторона должна быть больше 0")
         super().__init__(side_a, side_a)
-        self.name = "Square"
+        self.name = __class__.__name__
+
