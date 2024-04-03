@@ -19,7 +19,7 @@ class TestRectangle:
 
         r = Rectangle(side_a, side_b)
         assert r.get_area() == area, \
-            f'Result area equal {side_a * side_b}'
+            f'Result area not equal {side_a * side_b}'
 
     @pytest.mark.smoke
     @pytest.mark.otus
@@ -28,7 +28,6 @@ class TestRectangle:
     @pytest.mark.parametrize("rectangle_params", ["integer", "float"])
     def test_rectangle_area_positive_data_from_fixture(self, rectangle_data,
                                                        rectangle_params):
-
 
         side_a, side_b, area = rectangle_data(data=rectangle_params)
         r = Rectangle(side_a, side_b)
