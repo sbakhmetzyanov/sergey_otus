@@ -9,7 +9,8 @@ class TestCircle:
 
         radius, area = circle_data
         c = Circle(radius)
-        assert c.get_area() == area, f"Circle area should be {c.get_area()}"
+        assert c.get_area() == area, \
+            f"Circle area not equal. Actual: {c.get_area()}, Expected: {area}"
 
     @pytest.mark.parametrize("radius",
                              [
