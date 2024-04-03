@@ -9,7 +9,7 @@ class Circle(Figure):
             raise ValueError("Радиус должен быть больше нуля")
         self.radius = radius
 
-    @property
+
     def get_area(self):
         return math.pi * self.radius * self.radius
 
